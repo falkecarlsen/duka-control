@@ -180,6 +180,11 @@ def main():
         print("\n==== Errors ====")
         for trace, frame, err in trace_errors:
             print(f"{trace}: {err} \t Frame: {frame}")
+        # write summary to errors.log in outdir or current directory
+        errfile = os.path.join(args.outdir if args.outdir else ".", "errors.log")
+        with open(errfile, "w") as f:
+            for trace, frame, err in trace_errors:
+                f.write(f"{trace}: {err} \t Frame: {frame}\n")
 
 
 if __name__ == "__main__":

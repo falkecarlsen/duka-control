@@ -8,4 +8,8 @@ It consists of D (5V), GND and is meant for series-connection of multiple units 
 
 A bitpattern of max 56ms is repeated every ~99ms. A pulse seems to be 1.65ms long, allowing for a bitvector length of 34 bits. All unique states measured are provided raw in traces/ for reference. The heat-recovery unit switches between \*-in.csv and \*-out.csv every ~70s.
 
+## decode_trace.py
+Takes Saleae Logic exported CSV of a session and identifies frame within trace, exporting it for later use in controller.
 
+## duka-ir-remote-reader (abandoned)
+Brief experiment with decoding the IR remotes packets - it works, but not formatted nicely for decryption.

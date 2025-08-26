@@ -1,0 +1,20 @@
+esphome:
+  name: ir_reader
+
+esp8266:
+  board: d1_mini
+
+logger:
+  level: DEBUG
+  baud_rate: 115200
+
+
+remote_receiver:
+  pin:
+    number: D5             # GPIO14 on the D1 mini header
+    inverted: true        # TFDU4100 output is active low, leave false so marks are positive
+  dump: raw
+  tolerance: 50%
+  filter: 100us
+  idle: 4ms
+

@@ -9,6 +9,7 @@ It consists of D (5V), GND and is meant for series-connection of multiple units 
 A bitpattern of max 56ms is repeated every ~99ms. A pulse seems to be 1.65ms long, allowing for a bitvector length of 34 bits. All unique states measured are provided raw in traces/ for reference. The heat-recovery unit switches between \*-in.csv and \*-out.csv every ~70s.
 
 Correction: Due to having to keep timing in check and not having any feedback on state, bus approach abandoned in favour of just controlling physical buttons with relays.
+Working well past multiple months, continuously powered relays did not fail and their heat output not an issue for the original electronics.
 
 ## decode_trace.py
 Takes Saleae Logic exported CSV of a session and identifies frame within trace, exporting it for later use in controller.
